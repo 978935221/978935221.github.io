@@ -8,6 +8,9 @@ export default {
   plugins: [
     createVuePlugin(/* options */)
   ],
+  build: {
+    outDir: 'docs'
+  },
   define: {
     'process.env': {}
   },
@@ -26,7 +29,7 @@ export default {
 }
 
 // eslint-disable-next-line no-unused-vars
-function bindDevServerAfter ({ app }) {
+function bindDevServerAfter({ app }) {
   // serve mock data
   app.all('*', function (req, resp, next) {
     let pathname = req.path
@@ -52,7 +55,7 @@ function bindDevServerAfter ({ app }) {
   })
 }
 
-function smartResponse (req, resp, file) {
+function smartResponse(req, resp, file) {
   const directives = []
   let pos1 = 0; let pos2 = 0; let line
   const regexp = /^\s*\/\//
