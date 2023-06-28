@@ -1,0 +1,8 @@
+{
+  "extends": "stylelint-config-standard",
+  "ignoreFiles": "**/docs/**/*",
+  "rules": {
+    "selector-class-pattern": "^(?:[a-z][a-z0-9-]*|(?:el|v)[a-z0-9-]*(__[A-Za-z0-9-_]*)?)$"
+  },
+  "customSyntax": "postcss-html"
+}  
